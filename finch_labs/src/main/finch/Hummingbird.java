@@ -1,4 +1,4 @@
-package main;
+package main.finch;
 
 /**
  * This class extends the Microbit class to incorporate functions to control the inputs and outputs

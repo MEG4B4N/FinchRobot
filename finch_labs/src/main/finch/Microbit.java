@@ -1,4 +1,4 @@
-package main;
+package main.finch;
 
 /**
  * This class controls a micro:bit via bluetooth. It inherits almost 

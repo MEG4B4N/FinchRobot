@@ -1,4 +1,4 @@
-package main;
+package main.finch;
 
 public class FinchTest {
     public static void main(String[] args) {
