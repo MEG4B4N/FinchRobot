@@ -1,4 +1,4 @@
-package main;
+package main.finch;
 
 /**
  * This class extends the Microbit class to incorporate functions to control the inputs and outputs
@@ -97,7 +97,7 @@ public class Hummingbird extends Robot {
      * The function shows a warning dialog if the inputs are not in the specified range.
      *
      * @param port     The port that the position servo is attached to. (Range: 1-4)
-     * @param position The angle of the position servo. (Range: 0-180)
+     * @param angle    The angle of the position servo. (Range: 0-180)
      */
     public void setPositionServo(int port, int angle) {
     	if (!isPortValid(port,4)) {		// Check that port is valid
