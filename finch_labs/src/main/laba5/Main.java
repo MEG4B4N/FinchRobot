@@ -1,6 +1,8 @@
-package main;
+package main.laba5;
 
-public class Main5 {
+import main.finch.Finch;
+
+public class Main {
     public static void main(String[] args) {
         System.out.println("Program started");
 
