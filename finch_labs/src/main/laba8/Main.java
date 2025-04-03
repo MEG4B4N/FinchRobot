@@ -18,14 +18,19 @@ public class Main {
 
     public static void run(Finch f){
         while(!(f.getButton("A") || f.getButton("B"))){
-            int d = f.getDistance();
-            if(d>40){
-                f.setMove("F", 20, 95);
-            }else{
-                f.setTurn("L", 90, 95);
-                f.setMove("F", 20, 95);
-                f.setTurn("R", 90, 95);
-            }
+            check(f);
+        }
+    }
+
+    public static void check(Finch f){
+        int d = f.getDistance();
+        if(d>40){
+            f.setMove("F", 20, 95);
+        }else{
+            f.setTurn("L", 90, 95);
+            check(f);
+            f.setTurn("R", 90, 95);
+            check(f);
         }
     }
 }
