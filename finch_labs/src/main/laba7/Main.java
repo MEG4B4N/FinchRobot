@@ -3,8 +3,6 @@ package main.laba7;
 
 import main.finch.Finch;
 
-import java.util.Arrays;
-
 class Main{
     public static void main(String[] args) {
         System.out.println("Program started");
@@ -35,7 +33,6 @@ class Main{
         while(!(f.getButton("A") || f.getButton("B"))){
             double[] acc = f.getAcceleration();
             double a = Math.sqrt(acc[0] * acc[0] + acc[1] * acc[1] + acc[2] * acc[2]);
-            System.out.println(Arrays.toString(acc));
             if(a > diff/N+0.5){
                 f.setBeak(100, 0, 0);
             }else{

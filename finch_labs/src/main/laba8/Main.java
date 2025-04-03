@@ -23,12 +23,14 @@ public class Main {
     }
 
     public static void check(Finch f){
+        if (f.getButton("A") || f.getButton("B")) return;
         int d = f.getDistance();
         if(d>40){
             f.setMove("F", 20, 95);
         }else{
             f.setTurn("L", 90, 95);
             check(f);
+            if (f.getButton("A") || f.getButton("B")) return;
             f.setTurn("R", 90, 95);
             check(f);
         }

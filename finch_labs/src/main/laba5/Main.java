@@ -20,18 +20,18 @@ public class Main {
         int N = 40;
         int left = 0, right = 0;
         for (int i = 0; i < N; i++){
-            left += f.getLight("L");
-            right += f.getLight("R");
+            left  += f.getLine("L");
+            right += f.getLine("R");
             f.pause(1.0/N);
         }
         left /= N;
         right /= N;
-        int s = 40;
+        int s = 16;
         System.out.println("avg font left: "+left+"  right: "+right);
         while(!(f.getButton("A") || f.getButton("B"))){
-            int dl = left  - f.getLight("L");
-            int dr = right - f.getLight("R");
-            f.setMotors(bound(s - dl, 0, 100), bound(s - dr, 0, 100));
+            int dl = left  - f.getLine("L");
+            int dr = right - f.getLine("R");
+            f.setMotors(bound(s - dl, 1, 16), bound(s - dr, 1, 16));
             f.pause(0.01);
         }
     }
